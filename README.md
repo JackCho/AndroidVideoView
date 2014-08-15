@@ -6,3 +6,4 @@ Android自定义全屏VideoView，仿主流视频客户端，左右滑屏快退�
 
 如果你有好的实现或者功能扩展，请提交Pull Request。如果你有好的想法，请在我的微信公众账号留言，我来实现你的想法。
 微信公众账号：Android干货分享（ID：android_share）
+技术交流QQ群：318588906，欢迎大家加群，共同探讨下Android和Java技术
