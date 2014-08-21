@@ -85,9 +85,9 @@
             android:maxHeight="10dip"
             android:minHeight="10dip"
             android:progress="0"
-            android:progressDrawable="@drawable/seekbar"
-            android:thumb="@drawable/line_point"
             android:thumbOffset="0dp" />
+         <!--  android:progressDrawable="@drawable/seekbar"
+            android:thumb="@drawable/line_point" -->
     </RelativeLayout>
 
 </RelativeLayout>

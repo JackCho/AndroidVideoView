@@ -185,6 +185,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+		mHandler.removeMessages(0);
 		mHandler.removeCallbacksAndMessages(null);
 	}
 
@@ -198,17 +199,18 @@ public class MainActivity extends Activity implements OnClickListener {
 			case 1:
 				if (mVideo.getCurrentPosition() > 0) {
 					mPlayTime.setText(formatTime(mVideo.getCurrentPosition()));
-					int progress = mVideo.getCurrentPosition() * 100
-							/ mVideo.getDuration();
+					int progress = mVideo.getCurrentPosition() * 100 / mVideo.getDuration();
 					mSeekBar.setProgress(progress);
 					if (mVideo.getCurrentPosition() > mVideo.getDuration() - 100) {
 						mPlayTime.setText("00:00");
 						mSeekBar.setProgress(0);
 					}
+					mSeekBar.setSecondaryProgress(mVideo.getBufferPercentage());
 				} else {
 					mPlayTime.setText("00:00");
 					mSeekBar.setProgress(0);
 				}
+				
 				break;
 			case 2:
 				showOrHide();
